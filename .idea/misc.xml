@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/JUnitTesting/pom.xml" />
         <option value="$PROJECT_DIR$/MockitoTestingDemo/pom.xml" />
+        <option value="$PROJECT_DIR$/CRUD-testing-with-db/pom.xml" />
       </list>
     </option>
   </component>
