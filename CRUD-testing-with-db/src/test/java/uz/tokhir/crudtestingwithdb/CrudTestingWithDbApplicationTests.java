@@ -79,7 +79,15 @@ class CrudTestingWithDbApplicationTests {
                 ()->assertNotNull(product),
                 ()->assertEquals(2229,product.getPrice())
         );
+    }
 
+    @Test
+    @Sql(statements = "INSERT INTO PRODUCT_TBL (id, name, quantity, price) VALUES (3,'pen',1,49)",executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    public void testDeleteProduct(){
+        int recordCount = h2Repository.findAll().size();
+        assertEquals(1,recordCount);
+        restTemplate.delete(baseUrl+"/delete/{id}",3);
+        assertEquals(0,h2Repository.findAll().size());
     }
 
 }
