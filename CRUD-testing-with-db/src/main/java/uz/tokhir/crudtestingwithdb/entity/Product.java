@@ -2,6 +2,7 @@ package uz.tokhir.crudtestingwithdb.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table(name = "PRODUCT_TBL")
+@Builder
 public class Product {
 
     @Id
