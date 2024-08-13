@@ -21,7 +21,8 @@ class CrudTestingWithDbApplicationTests {
     @LocalServerPort
     private int port;
 
-    private String baseUrl = "http://localhost:" + port;
+    private String baseUrl = "http://localhost:9191";
+//    private String baseUrl = "http://localhost:" + port;
 
     private static RestTemplate restTemplate;
 
